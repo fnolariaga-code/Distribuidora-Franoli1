@@ -1,0 +1,36 @@
+@use '../abstracts/variables' as *; 
+@use '../abstracts/mixins' as *;
+nav {
+    // Nav no tiene estilos propios, sus hijos sí
+    
+    ul {
+        @include center-flex; // Reemplaza display, justify-content, align-items
+        gap: 25px;
+        list-style: none;
+        background-color: $color-amarillo;
+        padding: 12px 10px;
+        box-shadow: $sombra-media;
+        margin-top: 12px;
+        flex-wrap: wrap;
+
+        @include mobile {
+            gap: 12px; 
+            padding: 10px;
+        }
+
+        li a {
+            text-decoration: none;
+            font-weight: 600;
+            color: $color-negro;
+            transition: 0.25s ease;
+            padding: 6px 10px;
+            border-radius: 6px;
+
+            &:hover,
+            &.activo {
+                color: $color-rojo;
+                transform: translateY(-2px);
+            }
+        }
+    }
+}

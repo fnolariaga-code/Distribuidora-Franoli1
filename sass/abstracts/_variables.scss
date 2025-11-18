@@ -1,0 +1,22 @@
+// Colores principales
+$color-rojo: #c1121f;
+$color-rojo-oscuro: #9c0f1a;
+$color-amarillo: #ffd60a;
+$color-amarillo-suave: #fff5b0;
+$color-negro: #2b2b2b;
+$color-blanco: #ffffff;
+$color-texto-oscuro: #3b2f2f; // Para banners
+
+// Tipografía
+$fuente-titulos: "Poppins", sans-serif;
+$fuente-texto: "Nunito", sans-serif;
+
+// Sombras
+$sombra-media: 0 4px 10px rgba(0,0,0,0.15);
+$sombra-suave: 0 3px 6px rgba(0,0,0,0.1);
+
+// Puntos de quiebre (Breakpoints)
+$bp-desktop: 1200px;
+$bp-tablet: 992px;
+$bp-mobile: 768px;
+$bp-small: 420px;

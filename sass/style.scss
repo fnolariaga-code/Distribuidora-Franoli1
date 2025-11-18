@@ -1,0 +1,23 @@
+// 1. ABSTRACTS (Variables, Mixins)
+@use 'abstracts/variables';
+@use 'abstracts/mixins';
+
+// 2. BASE (Reset, Tipografía, Estilos generales)
+@use 'base/reset';
+@use 'base/base';
+@use 'base/tipografia';
+
+// 3. LAYOUT (Estructura principal)
+@use 'layout/header';
+@use 'layout/nav';
+@use 'layout/main';
+@use 'layout/footer';
+
+// 4. COMPONENTS (Módulos reutilizables)
+@use 'components/cards';
+@use 'components/botones';
+@use 'components/forms';
+@use 'components/redes';
+
+// 5. UTILS (Ayudas)
+@use 'utils/utilidades'

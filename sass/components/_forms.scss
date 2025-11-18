@@ -1,0 +1,87 @@
+@use '../abstracts/variables' as *; 
+@use '../abstracts/mixins' as *;
+
+// Definimos el color que no tenías en variables de Sass
+$color-form-principal: #e49307;
+$color-form-hover: #c77b02;
+
+.formulario-contacto {
+    max-width: 480px;
+    margin: 40px auto;
+    padding: 20px;
+    background: $color-blanco;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+
+    @include mobile {
+        margin: 20px 16px; 
+        padding: 14px;
+    }
+
+    @include small {
+        padding: 12px;
+    }
+
+    h2 {
+        text-align: center;
+        font-family: $fuente-titulos;
+        margin-bottom: 18px;
+        color: $color-form-principal;
+    }
+
+    .campo {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 16px;
+    }
+
+    label {
+        font-weight: 600;
+        margin-bottom: 6px;
+        font-size: 0.95rem;
+    }
+    
+    // Anidamiento para todos los inputs/textarea
+    input[type="text"],
+    input[type="tel"],
+    input[type="email"],
+    input[type="password"],
+    textarea {
+        padding: 12px;
+        border: 1.5px solid #d6d6d6;
+        border-radius: 8px;
+        font-size: 1rem;
+        transition: border-color 0.15s ease, box-shadow 0.15s ease;
+
+        &:focus {
+            outline: none;
+            border-color: $color-form-principal;
+            box-shadow: 0 0 0 4px rgba(228,147,7,0.08);
+        }
+    }
+    
+    textarea {
+        min-height: 120px;
+        resize: vertical;
+    }
+
+    // Botón enviar anidado
+    .boton-enviar,
+    input[type="submit"] {
+        background-color: $color-form-principal;
+        color: $color-blanco;
+        border: none;
+        padding: 12px;
+        width: 100%;
+        border-radius: 10px;
+        font-weight: 700;
+        font-size: 1.05rem;
+        cursor: pointer;
+        transition: background-color 0.15s ease, transform 0.12s ease;
+        
+        &:hover {
+            background-color: $color-form-hover;
+            transform: translateY(-3px);
+        }
+    }
+}

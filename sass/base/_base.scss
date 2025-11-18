@@ -1,0 +1,13 @@
+@use "../abstracts/variables" as v;
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: v.$fuente-texto;
+  background-color: #f8f9fa;
+  color: v.$color-negro;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}

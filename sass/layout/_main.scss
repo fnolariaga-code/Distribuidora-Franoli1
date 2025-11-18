@@ -1,0 +1,32 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/variables' as *; 
+@use '../abstracts/mixins' as *;
+
+main {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: $color-amarillo-suave;
+    border-radius: 12px;
+    margin: 30px auto;
+    max-width: 1200px;
+    box-shadow: $sombra-media;
+}
+
+// Contenedores de imágenes
+.contenedor-imagen-principal {
+    text-align: center;
+    position: relative;
+    margin-top: 20px;
+}
+
+.imagen-pagina-principal {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    margin-top: 10px;
+    box-shadow: $sombra-media;
+
+    @include mobile {
+        border-radius: 10px;
+    }
+}

@@ -1,0 +1,12 @@
+@use '../abstracts/variables' as *;
+.container-max {
+    max-width: $bp-desktop; // Usamos el breakpoint
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+// Si tenés logos pequeños en línea (lo sacamos de main)
+.logo-small {
+    width: 40px;
+    height: auto;
+}

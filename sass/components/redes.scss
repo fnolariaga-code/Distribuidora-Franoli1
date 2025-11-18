@@ -1,0 +1,45 @@
+@use '../abstracts/variables' as *; 
+@use '../abstracts/mixins' as *;
+.redes-footer {
+    @include center-flex; // Uso del Mixin
+    gap: 28px;
+    margin: 20px 0;
+    
+    @include mobile {
+        @include center-flex;
+    }
+    
+    @include small {
+        gap: 18px;
+    }
+
+    a {
+        display: inline-block;
+        text-decoration: none;
+    }
+
+    img {
+        width: 55px;
+        height: 55px;
+        object-fit: cover;
+        border-radius: 50%;
+        background-color: #24323c; // Podría ser una variable
+        padding: 10px;
+        transition: transform 0.25s ease;
+        
+        @include mobile {
+            width: 48px; 
+            height: 48px; 
+            padding: 8px;
+        }
+
+        @include small {
+            width: 42px; 
+            height: 42px;
+        }
+
+        &:hover {
+            transform: scale(1.08);
+        }
+    }
+}

@@ -1,0 +1,42 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/variables' as *; 
+@use '../abstracts/mixins' as *;
+h1, h2, h3 {
+    font-family: $fuente-titulos;
+    margin-bottom: 12px;
+}
+
+// Anidamos los estilos de encabezado
+h1 { 
+    color: $color-rojo; 
+    font-size: 30px; 
+}
+
+h2 { 
+    font-style: italic; 
+    color: $color-rojo-oscuro; 
+    font-size: 22px; 
+}
+
+h3 { 
+    color: $color-negro; 
+    font-size: 18px; 
+}
+
+// Estilo especial para el título principal
+#titulo-principal {
+    font-size: 64px;
+    color: $color-amarillo;
+    font-weight: 700;
+    margin-bottom: 12px;
+    font-family: $fuente-titulos;
+    
+    // Adaptación responsive anidada para este selector
+    @include tablet {
+        font-size: 48px;
+    }
+
+    @include small {
+        font-size: 36px;
+    }
+}
